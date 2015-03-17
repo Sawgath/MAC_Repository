@@ -1,0 +1,6 @@
+D:\BASIS_ASP.net\ASP.net Coding\Coder4_Blog_Application\Coder4_Blog_Application\bin\Coder4_Blog_Application.dll.config
+D:\BASIS_ASP.net\ASP.net Coding\Coder4_Blog_Application\Coder4_Blog_Application\bin\Coder4_Blog_Application.dll
+D:\BASIS_ASP.net\ASP.net Coding\Coder4_Blog_Application\Coder4_Blog_Application\bin\Coder4_Blog_Application.pdb
+D:\BASIS_ASP.net\ASP.net Coding\Coder4_Blog_Application\Coder4_Blog_Application\obj\Debug\Coder4_Blog_Application.csprojResolveAssemblyReference.cache
+D:\BASIS_ASP.net\ASP.net Coding\Coder4_Blog_Application\Coder4_Blog_Application\obj\Debug\Coder4_Blog_Application.dll
+D:\BASIS_ASP.net\ASP.net Coding\Coder4_Blog_Application\Coder4_Blog_Application\obj\Debug\Coder4_Blog_Application.pdb

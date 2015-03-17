@@ -1,0 +1,83 @@
+﻿.part1 {
+    
+    background: palevioletred;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.part2 {
+    
+    font-family: 'Pacifico', cursive;
+    background: rosybrown;
+}
+
+.part3Footer {
+    
+    
+    height: 60px;
+    font-family: 'Pacifico', cursive;
+    color: bisque;
+    background: black;
+}
+
+.part4 {
+    height: 90px;
+    background: black;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 45px;
+    color: chocolate;
+    
+  
+}
+
+.nav1 {
+    background: black;
+    border: 0;
+
+}
+.navChange2 {
+    background: black;
+    border-color: chocolate;
+    border-radius: 0 !important;
+    color: chocolate;
+
+}
+
+.bheader {
+    color: crimson;
+    font-size: 15px;
+    font-family: 'Pacifico', cursive;
+
+}
+.bfont {
+    font-size: 56px;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.bfont2 {
+    color: chocolate;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+.div2cus {
+    background: black;
+
+}
+.list-group-item.active {
+    background: black;
+    border-color: black;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+    color: black;
+background-color: white;
+}
+.postTopic1 {
+
+    padding: 20px;
+    border-radius:  20px;
+    background: white;
+}
+
+body {
+    background: chocolate;
+}
