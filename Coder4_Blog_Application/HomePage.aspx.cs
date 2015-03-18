@@ -13,5 +13,15 @@ namespace Coder4_Blog_Application
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:38369/ViewPage.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:38369/ShowPage.aspx");
+        }
     }
 }

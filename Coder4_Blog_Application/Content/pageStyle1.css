@@ -58,6 +58,11 @@
     color: chocolate;
     font-family: 'Gloria Hallelujah', cursive;
 }
+.bfont3 {
+    color: chocolate;
+    font-size: 30px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
 .div2cus {
     background: black;
 
@@ -78,6 +83,25 @@ background-color: white;
     background: white;
 }
 
+.mce-container, .mce-container-body {
+    height: 100px;
+}
+.textwrite {
+
+    height: 200px;
+}
+
 body {
     background: chocolate;
+}
+.butto {
+    width: 700px;
+    height: 60px;
+
+}
+
+.butto1 {
+    width: 100px;
+    height: 40px;
+
 }

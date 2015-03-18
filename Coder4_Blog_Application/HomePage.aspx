@@ -60,7 +60,7 @@
                                 </ul>
                             </li>
                         </ul>
-                       <%-- <form class="navbar-form navbar-right" role="search">
+                        <%-- <form class="navbar-form navbar-right" role="search">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Search">
                             </div>
@@ -74,10 +74,15 @@
 
 
     </div>
-    <!--body-->
+    <!--body                 <textarea>Easy! You should check out MoxieManager!</textarea>                         -->
     <div class="row">
         <div class="col-xs-8 postTopic1">
-
+            
+               <p> <asp:Button ID="Button1" runat="server" Text="New Post" CssClass="butto center-block" OnClick="Button1_Click" /></p>
+            
+               
+                <p>    <asp:Button ID="Button2" runat="server" Text="View post" CssClass="butto center-block" OnClick="Button2_Click" /></p>
+            
         </div>
         <div class="col-xs-4 div2cus">
             <div class="list-group">
@@ -112,6 +117,8 @@
 
 </div>
     </form>
+<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+<script>tinymce.init({ selector: 'textarea' });</script>
  <script src="Scripts/jquery-2.1.3.js"></script>
 <script src="Scripts/bootstrap.js"></script>
 </body>
