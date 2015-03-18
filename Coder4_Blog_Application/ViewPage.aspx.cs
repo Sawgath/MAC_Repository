@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.UI;
@@ -22,18 +23,16 @@ namespace Coder4_Blog_Application
         {
            User aUser=new User();
            aUser.Topic = TextBox1.Text;
-            aUser.Des = TextArea1.InnerText;
+           aUser.Des = Server.HtmlEncode(TextArea1.Value);
             //Label1.Text = aUser.Topic + "  " + aUser.Des;
 
             string connectionString = WebConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
                 SqlConnection connection = new SqlConnection(connectionString);
 
-                string query = String.Format("INSERT INTO topic1(Topic,Description) VALUES('{0}','{1}')", aUser.Topic, aUser.Des);
-
+                connection.Open();
+                string query = String.Format("INSERT INTO topic2(Topic,Description) VALUES('{0}','{1}')", aUser.Topic, aUser.Des);
                SqlCommand command = new SqlCommand(query, connection);
-
-               connection.Open();
-                int rowAffected = command.ExecuteNonQuery();
+                var rowAffected = command.ExecuteNonQuery();
                 connection.Close();
 
             //return rowAffected > 0;
