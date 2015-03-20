@@ -23,19 +23,20 @@ namespace Coder4_Blog_Application
         {
             string tempdate = "";
             User aUser = new User();
-            aUser.User_Id = 1;
+            aUser.User_Id = 3;
             aUser.date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-            aUser.Topic = TextBox1.Text;
+            aUser.Topic = TextBox1.Text.Replace("'", "''"); ;
 
             aUser.Des = Server.HtmlEncode(TextArea1.Value);
             //Label1.Text = aUser.Topic + "  " + aUser.Des;
 
             string connectionString = WebConfigurationManager.ConnectionStrings["myConnectionString1"].ConnectionString;
             SqlConnection connection = new SqlConnection(connectionString);
-
+            int i = 0;
             connection.Open();
-            string query = String.Format("INSERT INTO Article_tb(user_id,title,Date,description) VALUES('{0}','{1}','{2}','{3}')", aUser.User_Id, aUser.Topic, aUser.date, aUser.Des);
+            string query = String.Format("INSERT INTO Article_tb(user_id,title,Date,description,count_like) VALUES('{0}','{1}','{2}','{3}','{4}')", aUser.User_Id, aUser.Topic, aUser.date, aUser.Des,i);
+            //string query="INSERT INTO Article_tb(user_id,title,Date,description,count_like) VALUES("+aUser.User_Id +",'"+ aUser.Topic+"','"+aUser.date +"','"+aUser.Des +"',"+i +")";
             SqlCommand command = new SqlCommand(query, connection);
             var rowAffected = command.ExecuteNonQuery();
             connection.Close();

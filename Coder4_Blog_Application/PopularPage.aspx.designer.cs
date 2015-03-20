@@ -10,7 +10,7 @@
 namespace Coder4_Blog_Application {
     
     
-    public partial class ShowPage {
+    public partial class PopularPage {
         
         /// <summary>
         /// form1 control.
@@ -22,12 +22,12 @@ namespace Coder4_Blog_Application {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Label123 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label123;
+        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }

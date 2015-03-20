@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ShowPage.aspx.cs" Inherits="Coder4_Blog_Application.ShowPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PopularPage.aspx.cs" Inherits="Coder4_Blog_Application.PopularPage" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class=" container">
+    <div class=" container">
             <!--Header + Navber-->
             <div class="row">
                 <!--header-->
@@ -82,7 +82,7 @@
                    <article class="topicArticle"> 
                     <p class="center-block">
                       
-                            <asp:Label ID="Label123" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                         
                     </p>
                     </article>
@@ -126,8 +126,6 @@
 
         </div>
     </form>
-
-    
     <script src="Scripts/jquery-2.1.3.js"></script>
     <script src="Scripts/bootstrap.js"></script>
 </body>

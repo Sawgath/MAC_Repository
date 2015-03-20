@@ -46,7 +46,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1 ">
                         <ul class="nav navbar-nav">
                             <li><a href="ShowPage.aspx" class="hov123">Newest <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#" class="hov123">Popular</a></li>
+                            <li><a href="PopularPage.aspx" class="hov123">Popular</a></li>
                             <li><a href="CreateTopicPage.aspx" class="hov123">Compose</a></li>
                             <%--<li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown<span class="caret"></span></a>

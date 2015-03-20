@@ -48,6 +48,7 @@ namespace Coder4_Blog_Application
             string name = "";
             int nameid = 0;
             int passid = hello();
+            int count_eg=0;
             //name = getname(passid);
             connection.Open();
             TopicUser aShowUser2 = new TopicUser();
@@ -63,6 +64,8 @@ namespace Coder4_Blog_Application
                 nameid = Convert.ToInt32(dr["user_id"]);
                 aShowUser.Topic_Id = passid;
                 aShowUser.date = dr["Date"].ToString();
+                aShowUser.count = Convert.ToInt32(dr["count_like"]);
+                count_eg = Convert.ToInt32(dr["count_like"]);
                 aShowUser.Topic = dr["title"].ToString();
                 aShowUser.Des = dr["description"].ToString();
                 //Label1.Text = dr["Topic"].ToString();
@@ -78,7 +81,7 @@ namespace Coder4_Blog_Application
             aShowUser2.name = getname(nameid, connection);
 
             PrintTopic(aShowUser2);
-
+            updateCountLike(count_eg);
             populatingComments();
         }
 
@@ -99,6 +102,27 @@ namespace Coder4_Blog_Application
           
                 Label1.Text = total;
             
+        }
+
+
+        public void updateCountLike(int count)
+        {
+            
+
+            int f = hello();
+
+            string connectionString = WebConfigurationManager.ConnectionStrings["myConnectionString1"].ConnectionString;
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            count = count + 1;
+
+            connection.Open();
+            string query = "UPDATE [Article_tb] SET count_like =" + count + "WHERE topic_id =" + hello();
+            
+            SqlCommand command = new SqlCommand(query, connection);
+            var rowAffected = command.ExecuteNonQuery();
+            connection.Close();
+
         }
 
         public string getname(int i, SqlConnection connection)
@@ -135,6 +159,7 @@ namespace Coder4_Blog_Application
             public int User_Id { get; set; }
             public int Topic_Id { get; set; }
             public string name { get; set; }
+            public int count { get; set; }
             public string date { get; set; }
             public string Topic { get; set; }
             public string Des { get; set; }
