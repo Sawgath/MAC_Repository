@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="Coder4_Blog_Application.HomePage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TopicView.aspx.cs" Inherits="Coder4_Blog_Application.TopicView" %>
 
 <!DOCTYPE html>
 
@@ -11,7 +11,7 @@
     <link href="Content/pageStyle1.css" rel="stylesheet" />
 </head>
 <body>
-    <form id="form1" runat="server">
+        <form id="form1" runat="server">
     <div class=" container">
     <!--Header + Navber-->
     <div class="row">
@@ -79,10 +79,29 @@
     <div class="row">
         <div class="col-xs-8 postTopic1">
             
-               <p> <asp:Button ID="Button1" runat="server" Text="New Post" CssClass="butto center-block" OnClick="Button1_Click" /></p>
+               <p class="center-block"><h3 class="bfont3">
+
+                   <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
+               </h3> </p>
             
-               
-                <p>    <asp:Button ID="Button2" runat="server" Text="View post" CssClass="butto center-block" OnClick="Button2_Click" /></p>
+               <div class="row topicArticle">
+                       <div class="col-xs-4"></div>
+                       <div class="col-xs-8 commentDIV">
+                           
+                           
+                          <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                           
+                           <asp:TextBox ID="nameTextBox1" class="form-control" placeholder="Enter Your Name"  runat="server"></asp:TextBox>
+                           <textarea id="commentsTextbox" name="commentsTextbox1" class="form-control" rows="3" placeholder="Comments" runat="server"></textarea>
+                  
+                           <asp:Button ID="Button1" class="btn btn-default"  runat="server" Text="Comments" OnClick="Button1_Click" />
+                           <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
+                           
+
+                       </div>
+                   </div>
+
             
         </div>
         <div class="col-xs-4 div2cus">
@@ -118,8 +137,7 @@
 
 </div>
     </form>
-<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-<script>tinymce.init({ selector: 'textarea' });</script>
+    
  <script src="Scripts/jquery-2.1.3.js"></script>
 <script src="Scripts/bootstrap.js"></script>
 </body>

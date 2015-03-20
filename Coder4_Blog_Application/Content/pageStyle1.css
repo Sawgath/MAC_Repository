@@ -1,15 +1,4 @@
-﻿.part1 {
-    
-    background: palevioletred;
-    font-family: 'Gloria Hallelujah', cursive;
-}
-
-.part2 {
-    
-    font-family: 'Pacifico', cursive;
-    background: rosybrown;
-}
-
+﻿
 .part3Footer {
     
     
@@ -54,10 +43,7 @@
     font-family: 'Gloria Hallelujah', cursive;
 }
 
-.bfont2 {
-    color: chocolate;
-    font-family: 'Gloria Hallelujah', cursive;
-}
+
 .bfont3 {
     color: chocolate;
     font-size: 30px;
@@ -83,13 +69,7 @@ background-color: white;
     background: white;
 }
 
-.mce-container, .mce-container-body {
-    height: 100px;
-}
-.textwrite {
 
-    height: 200px;
-}
 
 body {
     background: chocolate;
@@ -99,6 +79,46 @@ body {
     height: 60px;
 
 }
+.topicArticle {
+    
+   
+}
+.topicArticle a {
+    font-family: 'Raleway', sans-serif;
+    color: cadetblue;
+}
+
+.topicArticle h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: brown;
+}
+.topicArticle h4 {
+
+    font-family: 'Arvo', serif;
+    color: black;
+    
+}
+
+
+.topicArticle h3 {
+    font-family: 'Courgette', cursive;
+    color: black;
+
+}
+.topicArticle h5 {
+    
+    font-family: 'Architects Daughter', cursive;
+    color: black;
+}
+
+.commentDIV {
+    background: cadetblue;
+    border-radius:  20px;
+    padding: 5px;
+
+}
+
+
 
 .butto1 {
     width: 100px;

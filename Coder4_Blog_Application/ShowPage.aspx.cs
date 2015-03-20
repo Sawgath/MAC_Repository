@@ -9,6 +9,8 @@ using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Net;
+using System.Text.RegularExpressions;
+
 namespace Coder4_Blog_Application
 {
     public partial class ShowPage : System.Web.UI.Page
@@ -16,6 +18,7 @@ namespace Coder4_Blog_Application
         protected void Page_Load(object sender, EventArgs e)
         {
             Load_all_Out();
+            
         }
 
 
@@ -23,13 +26,13 @@ namespace Coder4_Blog_Application
         public void Load_all_Out()
         {
             Stack<showUser> sList = new Stack<showUser>(); 
-            string connectionString = WebConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
+            string connectionString = WebConfigurationManager.ConnectionStrings["myConnectionString1"].ConnectionString;
             SqlConnection connection = new SqlConnection(connectionString);
             //OleDbConnection cn = new OleDbConnection(connectionString);
             
             
             connection.Open();
-            string query = ("SELECT * FROM  topic2");
+            string query = ("SELECT * FROM  [Article_tb]");
             SqlCommand command = new SqlCommand(query, connection);
             command.CommandType = CommandType.Text;
             var dr = command.ExecuteReader();
@@ -37,8 +40,11 @@ namespace Coder4_Blog_Application
             while (dr.Read())
             {
                 showUser aShowUser=new showUser();
-                aShowUser.Topic = dr["Topic"].ToString();
-                aShowUser.Des = dr["Description"].ToString();
+                aShowUser.User_Id = Convert.ToInt32(dr["user_id"]);
+                aShowUser.Topic_Id = Convert.ToInt32(dr["topic_id"]);
+                aShowUser.date = dr["Date"].ToString();
+                aShowUser.Topic = dr["title"].ToString();
+                aShowUser.Des = dr["description"].ToString();
                 //Label1.Text = dr["Topic"].ToString();
                 //Label2.Text = Server.HtmlDecode(dr["Description"].ToString());
                 sList.Push(aShowUser);
@@ -50,36 +56,26 @@ namespace Coder4_Blog_Application
             string total = "";
             foreach (var alist in sList)
             {
-                a = alist.Topic + "</br>";
-                b = Server.HtmlDecode(alist.Des) + "</br>";
+                a = "<h2><a href=TopicView.aspx?uhd=" + alist.Topic_Id +">"+ alist.Topic + "</a><h2></br>";
+                a = a + "<h5><i> Date :" + alist.date + " </i> </br><h5>";
+                // removing all html tags...........
+                string noHTML = Regex.Replace(Server.HtmlDecode(alist.Des), @"<[^>]+>|&nbsp;", "").Trim();
+                string noHTMLNormalised = Regex.Replace(noHTML, @"\s{2,}", " ");
+                // limiting the text...............
+                string last = noHTMLNormalised.Substring(0, 200);
+                b = "<h4>" + last + "...........................................</h4>" + "</br>";
                 total =total  +  a + b;
                
             }
             Label1.Text =total;
-            //cn.Open();
-            //OleDbCommand cmd = new OleDbCommand(query, cn);
-            //OleDbDataReader reader = cmd.ExecuteReader();
-
-            //while (reader.Read())
-            //{
-
-            //    Label1.Text = reader["Topic"].ToString();
-
-
-
-            //    pID1.InnerText = reader["Description"].ToString();
-                
-
-            //}
-
-
-
-            //reader.Close();
-            //cn.Close();
+         
         }
 
         public class showUser
         {
+            public int User_Id { get; set; }
+            public int Topic_Id { get; set; }
+            public string date { get; set; }
             public string Topic { get; set; }
             public string Des { get; set; }
 

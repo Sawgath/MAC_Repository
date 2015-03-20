@@ -249,7 +249,8 @@
     <Content Include="Scripts\tinymce\tinymce.js" />
     <Content Include="Scripts\tinymce\tinymce.min.js" />
     <Content Include="ShowPage.aspx" />
-    <Content Include="ViewPage.aspx" />
+    <Content Include="TopicView.aspx" />
+    <Content Include="CreateTopicPage.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -274,12 +275,19 @@
     <Compile Include="ShowPage.aspx.designer.cs">
       <DependentUpon>ShowPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewPage.aspx.cs">
-      <DependentUpon>ViewPage.aspx</DependentUpon>
+    <Compile Include="TopicView.aspx.cs">
+      <DependentUpon>TopicView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewPage.aspx.designer.cs">
-      <DependentUpon>ViewPage.aspx</DependentUpon>
+    <Compile Include="TopicView.aspx.designer.cs">
+      <DependentUpon>TopicView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateTopicPage.aspx.cs">
+      <DependentUpon>CreateTopicPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateTopicPage.aspx.designer.cs">
+      <DependentUpon>CreateTopicPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

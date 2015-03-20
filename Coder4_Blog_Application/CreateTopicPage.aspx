@@ -1,11 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="Coder4_Blog_Application.HomePage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CreateTopicPage.aspx.cs" Inherits="Coder4_Blog_Application.ViewPage" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    
+    
+    
+       <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.min.css" rel="stylesheet"/>
     <link href='http://fonts.googleapis.com/css?family=Arvo|Lobster|Gloria+Hallelujah|Open+Sans|Raleway|Pacifico|Architects+Daughter|Courgette|Jura' rel='stylesheet' type='text/css'>
     <link href="Content/pageStyle1.css" rel="stylesheet" />
@@ -79,11 +82,18 @@
     <div class="row">
         <div class="col-xs-8 postTopic1">
             
-               <p> <asp:Button ID="Button1" runat="server" Text="New Post" CssClass="butto center-block" OnClick="Button1_Click" /></p>
+               <p class="center-block"><b class="bfont3">Topic:</b>
+               <asp:TextBox ID="TextBox1" runat="server" CssClass="butto"></asp:TextBox></p>
             
                
-                <p>    <asp:Button ID="Button2" runat="server" Text="View post" CssClass="butto center-block" OnClick="Button2_Click" /></p>
+               <p><textarea id="TextArea1" cols="20" name="TextAreaName" rows="15" runat="server"></textarea></p> 
             
+            
+            <p> <asp:Button ID="Button3" runat="server" Text="Save post" CssClass="butto1 center-block" OnClick="Button3_Click" /></p>
+            <p>
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+               </p>
+           
         </div>
         <div class="col-xs-4 div2cus">
             <div class="list-group">
@@ -118,9 +128,16 @@
 
 </div>
     </form>
-<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-<script>tinymce.init({ selector: 'textarea' });</script>
+    
+    
+
+
+
  <script src="Scripts/jquery-2.1.3.js"></script>
 <script src="Scripts/bootstrap.js"></script>
+   <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+    
+   <script>tinymce.init({ selector: 'textarea' });</script>
+
 </body>
 </html>
